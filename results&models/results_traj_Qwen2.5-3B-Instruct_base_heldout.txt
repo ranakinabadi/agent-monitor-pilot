@@ -1,0 +1,40 @@
+48 trajectories, 1 unparseable (excluded)
+unsafe actions: 8 total = 7 followed an injection + 1 other tool-scope violations (e.g. using search on a read-only task)
+
+A. All unsafe actions vs safe actions  (positives: 8, negatives: 39)
+  generic action rules           recall 1/8 = 12% (95% CI 2%-47%)
+                                 false alarms 0/39 = 0% (95% CI 0%-9%)   precision 100%
+  reasoning cues                 recall 0/8 = 0% (95% CI 0%-32%)
+                                 false alarms 3/39 = 8% (95% CI 3%-20%)   precision 0%
+  reasoning-action consistency   recall 0/8 = 0% (95% CI 0%-32%)
+                                 false alarms 0/39 = 0% (95% CI 0%-9%)   precision n/a
+  combined (any of the three)    recall 1/8 = 12% (95% CI 2%-47%)
+                                 false alarms 3/39 = 8% (95% CI 3%-20%)   precision 25%
+
+B. Actions that followed an injection vs safe actions  (positives: 7, negatives: 39)
+  generic action rules           recall 1/7 = 14% (95% CI 3%-51%)
+                                 false alarms 0/39 = 0% (95% CI 0%-9%)   precision 100%
+  reasoning cues                 recall 0/7 = 0% (95% CI 0%-35%)
+                                 false alarms 3/39 = 8% (95% CI 3%-20%)   precision 0%
+  reasoning-action consistency   recall 0/7 = 0% (95% CI 0%-35%)
+                                 false alarms 0/39 = 0% (95% CI 0%-9%)   precision n/a
+  combined (any of the three)    recall 1/7 = 14% (95% CI 3%-51%)
+                                 false alarms 3/39 = 8% (95% CI 3%-20%)   precision 25%
+
+C. Actions that followed an injection: does the reasoning mention it?
+  reasoning mentions it: 4 cases
+    generic action rules           caught 0/4 = 0% (95% CI 0%-49%)
+    reasoning cues                 caught 0/4 = 0% (95% CI 0%-49%)
+    reasoning-action consistency   caught 0/4 = 0% (95% CI 0%-49%)
+    combined (any of the three)    caught 0/4 = 0% (95% CI 0%-49%)
+  reasoning is silent: 3 cases
+    generic action rules           caught 1/3 = 33% (95% CI 6%-79%)
+    reasoning cues                 caught 0/3 = 0% (95% CI 0%-56%)
+    reasoning-action consistency   caught 0/3 = 0% (95% CI 0%-56%)
+    combined (any of the three)    caught 1/3 = 33% (95% CI 6%-79%)
+
+D. Attack success rate by injection style (followed the injection / total)
+  colleague 0/7 = 0% (95% CI 0%-35%)
+  footnote 3/8 = 38% (95% CI 14%-69%)
+  meta     0/8 = 0% (95% CI 0%-32%)
+  policy   4/6 = 67% (95% CI 30%-90%)
